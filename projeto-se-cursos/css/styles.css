@@ -1,0 +1,180 @@
+/* Reset básico para garantir que o layout ocupe a altura total */
+html, body {
+    height: 100%; /* Garante que o body ocupe toda a altura da janela */
+    margin: 0; /* Remove margens padrão */
+    font-family: 'Arial', sans-serif; /* Fonte padrão */
+    background-color: #030303; /* Fundo escuro */
+    color: #ffffff; /* Texto branco */
+    display: flex;
+    flex-direction: column; /* Coloca header, main e footer em coluna */
+}
+
+/* Estilos do cabeçalho */
+header {
+    position: relative; /* Para permitir o posicionamento absoluto da logo */
+    background: #000000; /* Fundo preto */
+    color: #ffffff;
+    padding: 2rem 0; /* Padding superior e inferior */
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    position: absolute; /* Para que a logo possa ser posicionada em relação ao header */
+    top: -25px; /* Ajuste para a posição desejada */
+    left: 10px; /* Ajuste para a posição desejada */
+    width: 200%; /* Usa porcentagem para tornar responsiva */
+    max-width: 220px; /* Limita o tamanho máximo */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Navegação */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centraliza os itens do menu */
+    gap: 2rem; /* Espaço entre os itens do menu */
+}
+
+nav a {
+    color: #ffffff; /* Texto branco para links */
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: bold;
+    padding: 0.5rem; /* Aumenta a área clicável */
+}
+
+nav a:hover {
+    color: #09fa5280; /* Efeito de hover */
+}
+
+/* Estilos do conteúdo principal */
+main {
+    flex: 1; /* Faz o main ocupar o espaço restante */
+    padding: 2rem;
+    background-color: #1e1e1e; /* Fundo escuro para o conteúdo */
+}
+
+.cursos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza os cursos */
+    gap: 2rem; /* Espaço entre os cursos */
+}
+
+.curso {
+    border: 1px solid #444; /* Borda escura */
+    padding: 1.5rem;
+    background: #2c2c2c; /* Fundo dos cards */
+    border-radius: 8px; /* Arredondamento das bordas */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 280px; /* Largura fixa dos cards */
+    text-align: center; /* Centraliza o texto */
+}
+
+.curso img {
+    max-width: 100%; /* Imagem responsiva */
+    border-radius: 8px; /* Arredondamento das bordas */
+    margin-bottom: 1rem; /* Espaçamento abaixo da imagem */
+}
+
+.curso h3 {
+    margin: 0.5rem 0; /* Margem para o título */
+    color: #4caf50; /* Verde claro para o título */
+}
+
+.curso:hover {
+    transform: translateY(-5px); /* Levanta o card ao passar o mouse */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos para o botão de ver curso */
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #4caf50; /* Cor do botão */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #388e3c; /* Verde escuro ao passar o mouse */
+}
+
+/* Estilos do rodapé */
+footer {
+    background: #000000; /* Fundo preto para o rodapé */
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer nav {
+    margin-top: 0.5rem;
+}
+
+footer a {
+    color: #4caf50; /* Verde claro para os links do rodapé */
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+footer a:hover {
+    color: #a8e6cf; /* Efeito de hover nos links do rodapé */
+}
+
+/* Estilos para o formulário */
+form {
+    background: #1e1e1e;
+    padding: 2rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column; /* Alinha os elementos verticalmente */
+}
+
+form input, form button {
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.75rem;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: #333;
+    color: #fff;
+}
+
+form button {
+    background: #09fa5280; /* Cor de fundo do botão */
+    border: none; /* Remove a borda padrão */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    transition: background 0.3s; /* Transição suave para o hover */
+}
+
+/* Estilos para inputs */
+input {
+    margin-bottom: 1rem; /* Espaçamento entre os campos */
+    padding: 0.5rem; /* Padding interno */
+    border: 1px solid #444; /* Borda do campo */
+    border-radius: 5px; /* Arredondamento das bordas */
+    background-color: #121212; /* Fundo dos campos */
+    color: #ffffff; /* Cor do texto */
+}
+
+button {
+    padding: 0.5rem; /* Padding interno do botão */
+    background-color: #09fa5280; /* Cor de fundo do botão */
+    color: #ffffff; /* Cor do texto do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Arredondamento das bordas do botão */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    transition: background 0.3s; /* Transição suave para o hover */
+}
+
+/* Links gerais */
+a {
+    color: #09fa5280; /* Verde claro para links gerais */
+}
